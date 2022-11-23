@@ -1,0 +1,17 @@
+{
+  "name": "nocdocshelper",
+  "version": "0.0.1a",
+  "description": "A simple server",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node Server.js"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Samuel A. Matheson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
