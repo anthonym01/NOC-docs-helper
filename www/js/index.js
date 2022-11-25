@@ -27,7 +27,7 @@ let tickets = {
 
     },
     actionlevels: [
-        "No aplicable action",// clear - 0
+        "No tickets of this priority and type exists, ",// clear - 0
         "Add note to ticket. Anounce to slack. find an engineer to take ownership.",//Red - 1
         "Put a note in the ticket. Assign to yourself. Update Ticket every 2 hours with current status. If no customer response after 3 checks, escalate to management for follow-up",//yellow - 2
         "Check with IBM Team",//purple - 3
@@ -35,13 +35,49 @@ let tickets = {
         "Leave alone",//green - 5
         "Add note to ticket. Leave unassigned",//Dark blue - 6
     ],
-    actionmatrixday: [//yes im faking natural language, sue me
-        { typename: "Customer generated: Incident",tokens:"INC incident Customer generated", prioritymatrix: [1, 1, 4, 4] },
-        { typename: "Customer generated: Change request",tokens:"CHG change request Customer generated", prioritymatrix: [1, 1, 4, 4] },
-        { typename: "Customer generated: RITM",tokens:"RITM new user login logging SNOW", prioritymatrix: [1, 4, 4, 4] },
-        { typename: "Customer generated: IBM VA",tokens:"IBM VA Veteran Veterans association", prioritymatrix: [1, 3, 4, 4] },
-        { typename: "Customer generated: IBM GSA",tokens:"IBM GSA", prioritymatrix: [1, 3, 4, 4] },
-        { typename: "Customer generated: IBM NELLC",tokens:"IBM NELLC", prioritymatrix: [1, 3, 4, 4] },
+    actionmatrix: [//yes im faking natural language, sue me
+        {
+            typename: "Customer generated: Incident",
+            tokens: "INC incident Customer generated",
+            day: [1, 1, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Customer generated: Change request",
+            tokens: "CHG change request Customer generated",
+            day: [1, 1, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Customer generated: RITM",
+            tokens: "RITM new user login logging SNOW",
+            day: [1, 4, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Customer generated: IBM VA",
+            tokens: "IBM VA Veteran Veterans association",
+            day: [1, 3, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Customer generated: IBM GSA",
+            tokens: "IBM GSA",
+            day: [1, 3, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Customer generated: IBM NELLC",
+            tokens: "IBM NELLC",
+            day: [1, 3, 4, 4],
+            night: [1, 1, 6, 6]
+        },
+        {
+            typename: "Auto-generated: CHG",
+            tokens: "CHG change request Automatic auto generated",
+            day: [0, 0, 4, 4],
+            night: [0, 0, 5, 5]
+        },
     ],
 }
 
