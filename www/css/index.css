@@ -11,6 +11,7 @@ font-family: 'Lexend Deca', sans-serif;
 :root {
     --text-color: rgb(0, 0, 0);
     --background-color: rgb(255, 255, 255);
+    --background-color-alt: rgb(222, 222, 222);
     --background-color-60: rgba(255, 255, 255, 0.6);
     --accent-color: #00ccff;
 }
@@ -19,6 +20,7 @@ font-family: 'Lexend Deca', sans-serif;
     :root {
         --text-color: rgb(255, 255, 255);
         --background-color: rgb(0, 0, 0);
+        --background-color-alt: rgb(44, 44, 44);
         --background-color-60: rgba(0, 0, 0, 0.6);
         --accent-color: #00ccff;
     }
@@ -51,8 +53,9 @@ body {
     position: fixed;
     top: 3rem;
     left: 0;
-    width: calc(100% - 1rem);
+    width: 100%;
     margin: 0;
+    box-sizing: border-box;
     padding: 0;
     height: calc(100% - 2.2rem);
     display: none;
@@ -68,14 +71,76 @@ body {
     Tickets seer
 */
 
-.table_list_clider_container{
-    
+.table_list_clider_container {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+    background: none;
+    color: inherit;
+    height: fit-content;
 }
 
+.mode-select-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.mode-select-button {
+    all: unset;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    line-height: auto;
+    height: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 300ms, color 300ms;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+.mode-select-button:hover{
+    transition: background 100ms, color 100ms;
+    color: var(--text-color);
+    background-color: var(--background-color-alt);
+}
+
+.mode-select-button:active{
+    transition: background 100ms, color 100ms;
+    color: var(--background-color);
+    background-color: var(--accent-color);
+}
 /*
     Tablet / tall aspact ratio
 */
-@media screen and (min-aspect-ratio: 1/3) and (min-aspect-ratio: 3/4) and (min-width:300px) {}
+@media screen and (min-aspect-ratio: 1/3) and (min-aspect-ratio: 3/4) and (min-width:300px) {
+    .table_list_clider_container {
+        position: relative;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        background: none;
+        color: inherit;
+        height: fit-content;
+    }
+}
 
 /*    <--  Landscape layout / Standard (with min-width) -->     */
-@media screen and (min-aspect-ratio: 3/2) and (min-width:400px) {}
+@media screen and (min-aspect-ratio: 3/2) and (min-width:400px) {
+    .table_list_clider_container {
+        position: relative;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        background: none;
+        color: inherit;
+        height: fit-content;
+    }
+}
