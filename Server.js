@@ -5,7 +5,6 @@ const fs = require('fs');
 
 const port = 3690;//for testing only
 
-app.get('/', (request, response) => { startingpoint(response) });
 
 async function startingpoint(response) {//serve index.html
     response.setHeader('Acess-Control-Allow-Origin', '*');
@@ -23,6 +22,27 @@ async function startingpoint(response) {//serve index.html
         console.log('Catastrophy on index: ', err);
     }
 }
+
+
+async function writeresponce(res, filepath) {//write files in responses, for static files in the /www folder
+    try {
+        fs.readFile(filepath, function (err, databuffer) {
+            if (err) {
+                res.writeHead(404);//not okay
+                console.error(err);
+            } else {
+                res.writeHead(200);//200 ok
+                res.write(databuffer);
+            }
+            res.end();//end response
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+app.get('/', (request, response) => { startingpoint(response) });
 
 app.get('/*', (request, responce) => {// 'catch all' equivalent
     console.log('requested Url: ', request.url);
@@ -49,23 +69,6 @@ app.get('/*', (request, responce) => {// 'catch all' equivalent
 });
 
 app.listen(port, () => { console.log('Running on port ', port) })//Listen for requests, this starts the server
-
-async function writeresponce(res, filepath) {//write files in responses, for static files in the /www folder
-    try {
-        fs.readFile(filepath, function (err, databuffer) {
-            if (err) {
-                res.writeHead(404);//not okay
-                console.error(err);
-            } else {
-                res.writeHead(200);//200 ok
-                res.write(databuffer);
-            }
-            res.end();//end response
-        })
-    } catch (error) {
-        console.log(error);
-    }
-}
 
 /* Test Stuff */
 

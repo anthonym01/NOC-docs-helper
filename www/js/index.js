@@ -78,6 +78,24 @@ let tickets = {
             day: [0, 0, 4, 4],
             night: [0, 0, 5, 5]
         },
+        {
+            typename: "Auto-generated: RITM",
+            tokens: "RITM new user login logging SNOW Automatic auto generated",
+            day: [0, 0, 4, 4],
+            night: [0, 0, 5, 5]
+        },
+        {
+            typename: "Auto-generated: Incident - CPU",
+            tokens: "INC incident CPU Process Processor Automatic auto generated",
+            day: [0, 0, 4, 4],
+            night: [0, 0, 5, 5]
+        },
+        {
+            typename: "Auto-generated: Incident - CPU",
+            tokens: "Automatic auto generated",
+            day: [1, 2, 2, 0],
+            night: [2, 2, 5, 0]
+        },
     ],
 }
 
