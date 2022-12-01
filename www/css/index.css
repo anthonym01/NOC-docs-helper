@@ -82,9 +82,7 @@ body {
 }
 
 .mode-select-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     height: 2rem;
     width: 100%;
     display: flex;
@@ -106,17 +104,34 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
 }
-.mode-select-button:hover{
+
+.mode-select-button:hover,
+.mode-select-button:focus {
     transition: background 100ms, color 100ms;
     color: var(--text-color);
     background-color: var(--background-color-alt);
 }
 
-.mode-select-button:active{
+.mode-select-button:active {
     transition: background 100ms, color 100ms;
     color: var(--background-color);
     background-color: var(--accent-color);
 }
+
+#tickets_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tickets_table tr {
+    width: 100%;
+}
+
+#tickets_table td,
+#tickets_table th {
+    width: 20%;
+}
+
 /*
     Tablet / tall aspact ratio
 */

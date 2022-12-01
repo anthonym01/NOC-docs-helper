@@ -29,14 +29,25 @@
     <h2>Tickets matrix (Daytime)</h2>
     <div class="table_list_clider_container">
       <div class="mode-select-bar">
-        <button class="mode-select-button">Table view</button>
-        <button class="mode-select-button">List view</button>
+        <button class="mode-select-button" id="table_view_button">Table view</button>
+        <button class="mode-select-button" id="list_view_button">List view</button>
       </div>
-      <table>
-        <tr>
-          <th></th>
-        </tr>
-      </table>
+      <div class="clide" id="tickets_table_slide">
+        <table id="tickets_table">
+          <tr>
+            <th>Type/Priority</th>
+            <th title="Priority 1 tickets">P1</th>
+            <th title="Priority 2 tickets">P2</th>
+            <th title="Priority 3 tickets">P3</th>
+            <th title="Priority 4 tickets">P4</th>
+          </tr>
+          <tr>
+            <td>Customer generated: INC</td>
+          </tr>
+        </table>
+      </div>
+      <div class="clide" id="tickets_list_slide"></div>
+      
     </div>
   </div>
 
