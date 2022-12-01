@@ -12,6 +12,7 @@ font-family: 'Lexend Deca', sans-serif;
     --text-color: rgb(0, 0, 0);
     --background-color: rgb(255, 255, 255);
     --background-color-alt: rgb(222, 222, 222);
+    --background-color-alt2: rgb(190, 190, 190);
     --background-color-60: rgba(255, 255, 255, 0.6);
     --accent-color: #00ccff;
 }
@@ -21,6 +22,7 @@ font-family: 'Lexend Deca', sans-serif;
         --text-color: rgb(255, 255, 255);
         --background-color: rgb(0, 0, 0);
         --background-color-alt: rgb(44, 44, 44);
+        --background-color-alt2: rgb(78, 78, 78);
         --background-color-60: rgba(0, 0, 0, 0.6);
         --accent-color: #00ccff;
     }
@@ -109,7 +111,7 @@ body {
 .mode-select-button:focus {
     transition: background 100ms, color 100ms;
     color: var(--text-color);
-    background-color: var(--background-color-alt);
+    background-color: var(--background-color-alt2);
 }
 
 .mode-select-button:active {
@@ -119,17 +121,46 @@ body {
 }
 
 #tickets_table {
+    /* Ticket table */
     width: 100%;
     border-collapse: collapse;
 }
 
 #tickets_table tr {
+    background-color: var(--background-color);
+    transition: background 300ms;
     width: 100%;
+}
+
+#tickets_table tr:hover {
+    background-color: var(--background-color-alt);
+    transition: background 50ms;
+}
+
+#tickets_table th {
+    font-size: 1.2rem;
 }
 
 #tickets_table td,
 #tickets_table th {
     width: 20%;
+    border: 0.1rem solid var(--text-color);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#tickets_table td {
+    cursor: pointer;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background 300ms, color 300ms;
+}
+
+#tickets_table td:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transition: background 50ms, color 50ms;
 }
 
 /*
