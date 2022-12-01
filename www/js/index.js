@@ -87,11 +87,23 @@ let tickets = {
         {
             typename: "Auto-generated: Incident - CPU",
             tokens: "INC incident CPU Process Processor Automatic auto generated",
-            day: [0, 0, 4, 4],
-            night: [0, 0, 5, 5]
+            day: [1, 2, 2, 0],
+            night: [2, 2, 5, 0]
         },
         {
-            typename: "Auto-generated: Incident - CPU",
+            typename: "Auto-generated: Incident - Memory",
+            tokens: "Automatic auto generated",
+            day: [1, 2, 2, 0],
+            night: [2, 2, 5, 0]
+        },
+        {
+            typename: "Auto-generated: Incident - Disk space (C:)",
+            tokens: "Automatic auto generated",
+            day: [1, 1, 1, 0],
+            night: [1, 2, 5, 0]
+        },
+        {
+            typename: "Auto-generated: Incident - Memory",
             tokens: "Automatic auto generated",
             day: [1, 2, 2, 0],
             night: [2, 2, 5, 0]
