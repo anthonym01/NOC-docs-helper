@@ -1,4 +1,8 @@
 
+
+/*
+    Rectitudes day hours are 7a.m. to 7p.m.
+    */
 window.addEventListener('load', function () {
 
 });
@@ -103,7 +107,7 @@ let tickets = {
             night: [1, 2, 5, 0]
         },
         {
-            typename: "Auto-generated: Incident - Memory",
+            typename: "Auto-generated: Incident - Disk space (non C:)",
             tokens: "Automatic auto generated",
             day: [1, 2, 2, 0],
             night: [2, 2, 5, 0]
