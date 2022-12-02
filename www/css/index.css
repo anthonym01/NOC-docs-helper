@@ -63,6 +63,7 @@ body {
     display: none;
     color: var(--text-color);
     background-color: var(--background-color);
+    overflow: auto;
 }
 
 .mainview {
@@ -82,7 +83,10 @@ body {
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    
 }
 
 .landing_button {
@@ -94,10 +98,12 @@ body {
     margin: 1rem;
     text-align: center;
     line-height: auto;
-    font-size: 1.45rem;
+    font-size: 1.5rem;
     background-color: var(--text-color);
     color: var(--background-color);
     box-sizing: border-box;
+    align-self: center;
+    align-items: center;
 }
 
 /*
