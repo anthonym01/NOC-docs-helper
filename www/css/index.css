@@ -70,6 +70,37 @@ body {
 }
 
 /*
+    landing zone
+*/
+#landing_view h2 {
+    text-align: center;
+}
+
+.landing_buttons_pannel {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.landing_button {
+    all: unset;
+    position: relative;
+    height: 6rem;
+    width: 14rem;
+    box-sizing: border-box;
+    margin: 1rem;
+    text-align: center;
+    line-height: auto;
+    font-size: 1.45rem;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    box-sizing: border-box;
+}
+
+/*
     Tickets seer
 */
 
