@@ -104,6 +104,21 @@ body {
     box-sizing: border-box;
     align-self: center;
     align-items: center;
+    transition: background 300ms, color 300ms;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.landing_button:hover,
+.landing_button:focus {
+    transition: background 100ms, color 100ms;
+    box-shadow: 0rem 0.1rem 0.8rem 0.2rem var(--accent-color);
+}
+
+.landing_button:active {
+    transition: background 100ms, color 100ms;
+    color: var(--background-color);
+    background-color: var(--accent-color);
 }
 
 /*
