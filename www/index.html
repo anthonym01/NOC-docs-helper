@@ -23,22 +23,8 @@
 
   </div>
 
-  <div class="mainview" id="landing_view">
-    <h2>What do you need help with?</h2>
-    <div class="landing_buttons_pannel">
-      <button class="landing_button">Tickets</button>
-      <button class="landing_button">Net Raven</button>
-      <button class="landing_button">walk in procedure</button>
-      <button class="landing_button">Placehloder</button>
-      <button class="landing_button">Placehloder</button>
-      <button class="landing_button">Placehloder</button>
-    </div>
-  </div>
-
-  <div class="mainview_hidden" id="ticket_view">
-    <H1>Tickets</H1>
-    blah blah blah useful stuff about tickets
-    <h2>Tickets matrix (Daytime)</h2>
+  <div class="mainview" id="ticket_view">
+    <h2>Tickets matrix</h2>
     <div class="table_list_clider_container">
       <div class="mode-select-bar">
         <button class="mode-select-button" id="table_view_button">Table view</button>
@@ -54,8 +40,8 @@
             <th title="Priority 4 tickets">P4</th>
           </tr>
           <tr>
-            <td>Customer generated: Incident</td>
-            <td>p1 actions</td>
+            <td>Customer generated: Incident (clicking cell should give information about ticket type)</td>
+            <td>p1 actions (clicking cell should take user to info about ticket actions)</td>
             <td>p2 actions</td>
             <td>p3 actions</td>
             <td>p4 actions</td>
@@ -65,6 +51,11 @@
       <div class="clide" id="tickets_list_slide"></div>
 
     </div>
+
+    <h2>Customer specific events</h2>
+    <p>
+      Sometimes a certain customer requests a certain type and/or priority of ticket be handled a certain way
+    </p>
   </div>
 
   <script type="text/javascript" src="js/index.js"></script>
